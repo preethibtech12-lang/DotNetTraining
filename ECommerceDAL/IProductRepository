@@ -1,0 +1,5 @@
+namespace EcommerceDAL
+
+public class IProductRepository {
+
+}
