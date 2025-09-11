@@ -1,29 +1,37 @@
 ﻿using ECommerceDomain;
-using System.Text.Json;
 using System.Linq;
 namespace ECommerceDAL;
 
 public class ProductRepository : IProductRepository
 {
     public IList<Product> Get() {       
-        IList<Product>? products =  getProductDataFromJsonFile();
-        return products;
+        return JSONHelper.getDataFromJsonFile();
     }
-
     public Product Get(int ProductId) {        
-        IList<Product>? products =  getProductDataFromJsonFile();
+        IList<Product>? products =  JSONHelper.getDataFromJsonFile();
         var product = products.FirstOrDefault(p => p.ProductId == ProductId);
         return product;
+    }    
+    public void SaveProduct(Product Product){
+        IList<Product>? products =  JSONHelper.getDataFromJsonFile();
+        products.Add(Product);
+        JSONHelper.setDataToJsonFile(products);
     }
-
-    public IList<Product> getProductDataFromJsonFile() {
-        var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Json/Products.json");
-        if (!System.IO.File.Exists(filePath))
-        {
-            throw new FileNotFoundException($"File not found: {filePath}");
-        }  
-        using var openStream = System.IO.File.OpenRead(filePath);
-        var products =  JsonSerializer.Deserialize<IList<Product>>(openStream);
-        return products;
+    public void UpdateProduct(Product ProductToUpdate) {
+        IList<Product>? products =  JSONHelper.getDataFromJsonFile();
+        var existingProduct = products.FirstOrDefault(p => p.ProductId == ProductToUpdate.ProductId);
+        if(existingProduct != null) {
+            products.Remove(existingProduct);
+            products.Add(ProductToUpdate);
+        }        
+        JSONHelper.setDataToJsonFile(products);
+    }
+    public void DeleteProduct(int ProductId) {
+        IList<Product>? products =  JSONHelper.getDataFromJsonFile();
+        var existingProduct = products.FirstOrDefault(p => p.ProductId == ProductId);
+        if(existingProduct != null) {
+            products.Remove(existingProduct);
+        }        
+        JSONHelper.setDataToJsonFile(products);
     }
 }

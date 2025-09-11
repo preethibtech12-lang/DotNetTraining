@@ -1,0 +1,32 @@
+@using ECommerceDomain;
+@model Product;
+
+
+<h2>Product Details</h2>
+<div>
+<form>
+<div class="row">
+    <div class="col-lg-3">
+        <label>Name</label>
+        <input type="textbox" value="@Model.Name"/>
+    </div>
+</div>
+<div class="row mt-2">
+    <div class="col-lg-3">
+        <label>Description</label>
+        <textarea type="textbox">@Model.Description</textarea>
+    </div>
+</div>
+<div class="row mt-2">
+    <div class="col-lg-3">
+        <label>Upload</label>
+        <input type="file" />
+    </div>
+</div>
+<div class="row mt-2">
+    <div class="col-lg-3">
+        <button class="btn btn-primary">Save</button>
+    </div>
+</div>
+</form>
+</div>
