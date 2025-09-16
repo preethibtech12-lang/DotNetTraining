@@ -12,7 +12,11 @@
         <input type="password" class="form-control" name="password"  />
     </div>
 </div>    
+<div class="row col-12 text-danger">
+    <span>@ViewBag.ErrorMsg</span>
+</div>
 <div class="row text-center">
+    <div class="col-1"><a asp-controller="Auth" asp-action="Create">New User</a></div>
     <div class="col-3 mt-2">
         <button type="submit" class="btn btn-primary">Login</button>
     </div> 

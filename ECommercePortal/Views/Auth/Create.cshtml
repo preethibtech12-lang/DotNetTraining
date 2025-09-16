@@ -1,0 +1,31 @@
+@model ECommerceDomain.User
+
+<h1>Add New User</h1>
+@using (Html.BeginForm("Create", "Auth", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-4">
+            @Html.LabelFor(m => m.FirstName)
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+        </div>
+        <div class="col-4">
+            @Html.LabelFor(m => m.LastName)
+            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-4">
+            @Html.LabelFor(m => m.EmailId)
+            @Html.TextBoxFor(m => m.EmailId, new { @class = "form-control" })
+        </div>
+        <div class="col-4">
+            @Html.LabelFor(m => m.ContactNo)
+            @Html.TextBoxFor(m => m.ContactNo, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-4">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+}

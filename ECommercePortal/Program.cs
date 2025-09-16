@@ -6,8 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
-builder.Services.AddScoped<IAuthRepository, AuthRepository>();
-builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -27,7 +27,7 @@ app.MapStaticAssets();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Product}/{action=Home}/{id?}")
+    pattern: "{controller=Auth}/{action=Login}/{id?}")
     .WithStaticAssets();
 
 
