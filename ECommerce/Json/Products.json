@@ -1,0 +1,3 @@
+[{"ProductId":1,"Name":"HP Laptop","Description":"HP Laptop Description","ImageUrl":"/images/dell.jpg"},
+{"ProductId":2,"Name":"Dell Laptop","Description":"Dell Laptop Description","ImageUrl":"/images/hp.jpg"},
+{"ProductId":3,"Name":"Mac Book","Description":"Mac Book Description","ImageUrl":"/images/mac.jpg"}]
