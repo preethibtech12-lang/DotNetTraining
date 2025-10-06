@@ -25,8 +25,8 @@ public class OrderProcessingController : ControllerBase
 
     [HttpGet(Name="GetOrder")]
     [Route("GetOrder")]
-    public IActionResult GetOrderByUserId([FromQuery] string userId) {
-        IList<Order> orders = _orderService.GetOrderByUserId(userId);
+    public async Task<IActionResult> GetOrderByUserId([FromQuery] string userId) {
+        IList<Order> orders = await _orderService.GetOrderByUserId(userId);
         return Ok(orders);
     }
 }    

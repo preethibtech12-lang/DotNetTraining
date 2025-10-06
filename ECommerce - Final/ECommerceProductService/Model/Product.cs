@@ -5,7 +5,7 @@ public class Product
 {
     [BsonId] 
     [BsonRepresentation(BsonType.ObjectId)]
-    public string _id { get; set; }
+    public string? _id { get; set; }
     
     [BsonElement("ProductId")]
     public int ProductId {get; set;} 

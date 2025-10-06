@@ -40,3 +40,12 @@ C:\Preethi\dotNetTraining\ECommerce - Final\ECommerceShoppingCartService\obj\Deb
 C:\Preethi\dotNetTraining\ECommerce - Final\ECommerceShoppingCartService\obj\Debug\net9.0\ECommerceShoppingCart.pdb
 C:\Preethi\dotNetTraining\ECommerce - Final\ECommerceShoppingCartService\obj\Debug\net9.0\ECommerceShoppingCart.genruntimeconfig.cache
 C:\Preethi\dotNetTraining\ECommerce - Final\ECommerceShoppingCartService\obj\Debug\net9.0\ref\ECommerceShoppingCart.dll
+C:\Preethi\dotNetTraining\ECommerce - Final\ECommerceShoppingCartService\bin\Debug\net9.0\DnsClient.dll
+C:\Preethi\dotNetTraining\ECommerce - Final\ECommerceShoppingCartService\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Preethi\dotNetTraining\ECommerce - Final\ECommerceShoppingCartService\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+C:\Preethi\dotNetTraining\ECommerce - Final\ECommerceShoppingCartService\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\Preethi\dotNetTraining\ECommerce - Final\ECommerceShoppingCartService\bin\Debug\net9.0\MongoDB.Bson.dll
+C:\Preethi\dotNetTraining\ECommerce - Final\ECommerceShoppingCartService\bin\Debug\net9.0\MongoDB.Driver.dll
+C:\Preethi\dotNetTraining\ECommerce - Final\ECommerceShoppingCartService\bin\Debug\net9.0\SharpCompress.dll
+C:\Preethi\dotNetTraining\ECommerce - Final\ECommerceShoppingCartService\bin\Debug\net9.0\Snappier.dll
+C:\Preethi\dotNetTraining\ECommerce - Final\ECommerceShoppingCartService\bin\Debug\net9.0\ZstdSharp.dll

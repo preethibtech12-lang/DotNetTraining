@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using ECommerceProductService.Model;
 using ECommerceProductService.Service;
+using Microsoft.AspNetCore.Authorization;
 namespace ECommerceProductService.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/products")]
 public class ProductsController : ControllerBase

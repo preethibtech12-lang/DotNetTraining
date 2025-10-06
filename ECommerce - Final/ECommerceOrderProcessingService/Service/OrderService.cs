@@ -10,11 +10,12 @@ public class OrderService : IOrderService {
         _orderRepository = orderRepository;
     }
 
-    public void SaveOrder(Order Order) {
-
+    public void SaveOrder(Order order) {
+        _orderRepository.SaveOrder(order);
     }
     
-    public IList<Order> GetOrderByUserId(string userId) {
-        return new List<Order>();
+    public async Task<IList<Order>> GetOrderByUserId(string userId) {
+        IList<Order> orders =  await _orderRepository.GetOrderByUserId(userId);
+        return orders;
     }
 }
